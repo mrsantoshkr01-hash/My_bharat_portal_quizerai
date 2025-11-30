@@ -1,0 +1,151 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: quizerai-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --maxmemory 2gb --maxmemory-policy allkeys-lru
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - quizerai-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: quizerai-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: quizerai
+      MYSQL_USER: quizerai
+      MYSQL_PASSWORD: quizerai123
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - quizerai-network
+
+  celery_worker:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: quizerai-celery-worker
+    command: celery -A app.celery_app worker --loglevel=info --concurrency=4 -Q quiz_generation,document_processing,default
+    volumes:
+      - .:/app
+      - uploads_data:/app/uploads
+      - logs_data:/app/logs
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=mysql+mysqldb://quizerai:quizerai123@mysql:3306/quizerai
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      redis:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - quizerai-network
+
+  celery_beat:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: quizerai-celery-beat
+    command: celery -A app.celery_app beat --loglevel=info
+    volumes:
+      - .:/app
+      - logs_data:/app/logs
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - DATABASE_URL=mysql+mysqldb://quizerai:quizerai123@mysql:3306/quizerai
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - quizerai-network
+
+  flower:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: quizerai-flower
+    command: celery -A app.celery_app flower --port=5555 --broker=redis://redis:6379/0
+    ports:
+      - "5555:5555"
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+    depends_on:
+      - redis
+      - celery_worker
+    restart: unless-stopped
+    networks:
+      - quizerai-network
+
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: quizerai-backend
+    command: uvicorn app.main:app --host 0.0.0.0 --port 10000 --reload --workers 1
+    volumes:
+      - .:/app
+      - uploads_data:/app/uploads
+      - logs_data:/app/logs
+    ports:
+      - "10000:10000"
+    environment:
+      - DATABASE_URL=mysql+mysqldb://quizerai:quizerai123@mysql:3306/quizerai
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - PYTHONUNBUFFERED=1
+      - ENV=development
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - quizerai-network
+
+volumes:
+  redis_data:
+    driver: local
+  mysql_data:
+    driver: local
+  uploads_data:
+    driver: local
+  logs_data:
+    driver: local
+
+networks:
+  quizerai-network:
+    driver: bridge

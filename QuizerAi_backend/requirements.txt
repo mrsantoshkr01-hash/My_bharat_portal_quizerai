@@ -1,0 +1,159 @@
+fastapi
+langchain
+langchain_community
+langchain_huggingface
+pymupdf 
+axios
+pymongo
+dotenv
+langchain_core
+ipykernel
+pymupdf
+langchain_groq
+sentence_transformers
+playwright 
+unstructured
+uvicorn
+langchain_chroma
+pillow 
+pytesseract 
+python-multipart
+# from here for the you tube  reader and summarizer
+youtube_search
+youtube_transcript_api
+pytube
+
+# this is after the error happens
+langchain_yt_dlp
+
+
+
+# we are going to use sql for database AND SQLALCHEMY FOR THE CONNECTION wiht the python backend with the sql database 
+python-jose   #Provides JWT (JSON Web Token) encoding and decoding and other cryptographic  functionalities
+
+#Implements OTP (One-Time Password) algorithms, including TOTP (Time-based) and HOTP (Counter-based).
+#Used for two-factor authentication (2FA) or OTP-based login verification.
+pyotp  
+
+# Simplifies Single Sign-On (SSO) integration in FastAPI applications.
+
+# Supports third-party authentication systems like Google, Facebook, GitHub, Microsoft, etc.
+
+# Handles OAuth2 and OpenID Connect protocols.
+
+fastapi-sso
+
+# A Python SQL toolkit and Object-Relational Mapper (ORM).
+
+# Helps in interacting with relational databases (e.g., MySQL, PostgreSQL, SQLite) using Python objects instead of SQL queries.
+
+sqlalchemy
+
+# Validates email addresses.
+
+# Ensures email addresses are properly formatted and optionally checks DNS records to confirm if the domain exists.
+
+email-validator
+
+
+alembic
+psycopg2-binary
+python-jose[cryptography]
+
+pyotp
+qrcode
+pillow
+fastapi-sso
+redis
+celery
+pydantic[email]
+pymysql
+fastapi-mail
+validators==0.28.1
+youtube_transcript_api
+pytube
+aioredis  #An asyncio-compatible Redis client. It allows you to interact with Redis databases using async/await in Python.
+python-decouple 
+cryptography #A robust library for encryption, hashing, signing, and key management.   
+websockets #A library for building WebSocket servers and clients with asyncio.  Use Case: Load environment variables from a .env file easily.
+python-magic
+aiofiles #File handling with async/await support.
+
+
+
+uuid  #Generate universally unique identifiers for user IDs, session tokens, etc
+
+
+pytz  #Timezone definitions and conversions using the IANA time zone database. Make datetime objects timezone-aware.
+
+python-dateutil #Extension of the datetime module with powerful parsing and arithmetic support.  Handle complex date/time manipulations like recurring events, parsing ISO8601 strings.
+
+
+
+pytest
+pytest-asyncio
+pytest-mock
+httpx
+pydantic-settings
+structlog
+python-json-logger
+mysqlclient
+# selenium
+# webdriver-manager
+# beautifulsoup4
+# requests
+
+
+selenium==4.15.0
+webdriver-manager==4.0.1
+beautifulsoup4==4.12.2
+lxml==4.9.3
+requests==2.31.0
+
+
+
+# swithching to google youtubedataapi v3 because reaching to hte limit 
+google-auth 
+google-auth-oauthlib 
+google-auth-httplib2
+google-api-python-client
+
+
+# for email authentication 
+# Database
+
+
+
+
+# Authentication & Security
+
+
+
+
+
+# Email functionality
+aiosmtplib==3.0.1
+
+jinja2==3.1.2
+
+# Environment & Configuration
+
+
+openpyxl
+redis
+yt-dlp
+aiohttp
+librosa
+soundfile
+diskcache
+tqdm 
+tenacity
+aiofiles
+geopy
+
+bcrypt==4.1.2
+python-jose[cryptography]==3.3.0
+pyotp==2.9.0
+qrcode[pil]==7.4.2
+python-dotenv==1.0.0
+

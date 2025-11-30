@@ -1,0 +1,15 @@
+zustand
+chart.js
+react-chartjs-2
+react-dropzone
+react-query
+axios
+# we are adding this for markdown 
+react-markdown 
+remark-gfm 
+rehype-highlight 
+highlight.js
+mapbox-gl
+@mapbox/mapbox-gl-geocoder
+socket-io-client
+@types/mapbox-gl

@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /admin/
+
+# Explicitly allow Bingbot to crawl everything except protected paths
+User-agent: bingbot
+Allow: /
+Allow: /_next/
+Allow: /static/
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /admin/
+
+Sitemap: https://quizerai.com/sitemap.xml
