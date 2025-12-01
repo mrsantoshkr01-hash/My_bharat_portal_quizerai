@@ -1,0 +1,39 @@
+This is a placeholder text-based diagram for the QuizerAI system architecture.
+
+Replace this file with a proper PNG diagram exported from your diagramming tool
+while keeping the same filename (`system_architecture_diagram.png`) so that
+all documentation links remain valid.
+
+ASCII representation:
+
++---------------------+          +-------------------------+
+|  Web Client (Next) | <------> |   API Gateway / CORS    |
+| - Teacher UI       |          +-----------+-------------+
+| - Student UI       |                      |
++---------+-----------+                      v
+          |                        +----------------------+
+          | HTTPS                  |    FastAPI Backend   |
+          |                        | - Auth & RBAC       |
+          |                        | - Quiz Service      |
+          |                        | - OCR Service       |
+          |                        | - AI Orchestrator   |
+          |                        | - Assignment/Grades |
+          |                        | - Anti-cheating     |
+          |                        +----------+----------+
+          |                                   |
+          |                          +--------+--------+
+          |                          |                 |
+          v                          v                 v
++----------------+          +----------------+   +-------------+
+|   PostgreSQL   |          |   AWS Bedrock  |   |   Textract  |
+|  (Relational)  |          | (LLM, Embeds)  |   |   (OCR)     |
++----------------+          +----------------+   +-------------+
+          ^
+          |
+          v
+   +-------------+
+   |    S3       |
+   | (Uploads)   |
+   +-------------+
+
+

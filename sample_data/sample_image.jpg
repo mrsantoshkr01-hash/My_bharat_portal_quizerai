@@ -1,0 +1,10 @@
+This is a placeholder file representing a sample image (JPEG) for QuizerAI.
+
+Use this file to:
+- Test the OCR extraction endpoint for printed text.
+- Demonstrate quiz generation from textbook images during demos.
+
+Replace this with an actual .jpg image in real use (e.g., a photo of a textbook
+page or printed worksheet) that you have permission to use.
+
+

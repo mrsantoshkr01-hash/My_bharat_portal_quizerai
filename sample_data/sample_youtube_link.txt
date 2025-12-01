@@ -1,0 +1,11 @@
+Sample YouTube link for QuizerAI video-based quiz generation:
+
+URL:
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+Description:
+This placeholder represents a lecture or educational video. In a real deployment,
+replace this with a link to a course lecture or explainer video you want to use
+for quiz and summary generation.
+
+

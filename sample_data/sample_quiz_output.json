@@ -1,0 +1,93 @@
+{
+  "quiz_id": "sample_quiz_001",
+  "title": "Introduction to Photosynthesis",
+  "topic": "Biology",
+  "grade_level": "8",
+  "source_metadata": {
+    "source_type": "pdf",
+    "source_name": "sample.pdf",
+    "pages_used": [1, 2]
+  },
+  "config": {
+    "num_questions": 5,
+    "difficulty": "medium",
+    "question_types": ["mcq", "short_answer"]
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "difficulty": "easy",
+      "bloom_level": "remember",
+      "question_text": "What is the primary purpose of photosynthesis in plants?",
+      "options": [
+        "To absorb water from the soil",
+        "To convert light energy into chemical energy",
+        "To release nitrogen into the atmosphere",
+        "To produce heat for the plant"
+      ],
+      "correct_option_index": 1,
+      "explanation": "During photosynthesis, light energy is converted into chemical energy stored in glucose."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "difficulty": "medium",
+      "bloom_level": "understand",
+      "question_text": "Which of the following substances are the main reactants of photosynthesis?",
+      "options": [
+        "Oxygen and glucose",
+        "Carbon dioxide and water",
+        "Nitrogen and oxygen",
+        "Water and methane"
+      ],
+      "correct_option_index": 1,
+      "explanation": "Plants use carbon dioxide from the air and water from the soil as reactants in photosynthesis."
+    },
+    {
+      "id": "q3",
+      "type": "short_answer",
+      "difficulty": "medium",
+      "bloom_level": "apply",
+      "question_text": "Explain why chlorophyll is important for photosynthesis.",
+      "expected_answer": "Chlorophyll absorbs light energy, mainly from the blue and red parts of the spectrum, which is then used to drive the chemical reactions of photosynthesis.",
+      "rubric": {
+        "keywords": ["chlorophyll", "absorbs light", "light energy", "drive reactions"],
+        "min_keywords_to_accept": 2
+      }
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "difficulty": "medium",
+      "bloom_level": "analyze",
+      "question_text": "A plant is placed in a dark room for several days. Which of the following is the most likely result?",
+      "options": [
+        "The plant will increase the rate of photosynthesis.",
+        "The plant will carry out photosynthesis using heat instead of light.",
+        "The plant's rate of photosynthesis will decrease significantly.",
+        "The plant will produce more chlorophyll to compensate."
+      ],
+      "correct_option_index": 2,
+      "explanation": "Without light, photosynthesis slows or stops because light energy is required to power the reactions."
+    },
+    {
+      "id": "q5",
+      "type": "short_answer",
+      "difficulty": "medium",
+      "bloom_level": "evaluate",
+      "question_text": "A student claims that photosynthesis only benefits plants. Do you agree? Justify your answer.",
+      "expected_answer": "No. Photosynthesis also benefits animals and humans by producing oxygen for respiration and forming the base of most food chains by creating organic molecules.",
+      "rubric": {
+        "points": 5,
+        "criteria": [
+          "Mentions oxygen production",
+          "Mentions food/energy source or food chains",
+          "Provides a clear justification"
+        ]
+      }
+    }
+  ]
+}
+
+

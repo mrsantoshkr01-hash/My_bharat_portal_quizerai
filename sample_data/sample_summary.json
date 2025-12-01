@@ -1,0 +1,24 @@
+{
+  "summary_id": "sample_summary_001",
+  "title": "Summary of Photosynthesis Basics",
+  "topic": "Biology",
+  "grade_level": "8",
+  "source_metadata": {
+    "source_type": "pdf",
+    "source_name": "sample.pdf",
+    "pages_used": [1, 2]
+  },
+  "key_points": [
+    "Photosynthesis is the process by which plants convert light energy into chemical energy stored in glucose.",
+    "The main reactants of photosynthesis are carbon dioxide and water, and the main products are glucose and oxygen.",
+    "Chlorophyll, found in chloroplasts, absorbs light energy and is essential for driving the reactions.",
+    "Photosynthesis primarily occurs in the leaves of plants and is influenced by light intensity, carbon dioxide concentration, and temperature.",
+    "Photosynthesis is a critical process for life on Earth because it produces oxygen and forms the base of most food chains."
+  ],
+  "generated_summary": "Photosynthesis is a chemical process in which plants use sunlight, carbon dioxide, and water to make their own food and release oxygen. Chlorophyll in the leaves captures light energy and powers the reactions inside chloroplasts. The glucose produced provides energy and building blocks for the plant, while the oxygen released is essential for the respiration of many organisms. Overall, photosynthesis supports most life on Earth by supplying oxygen and forming the foundation of food chains.",
+  "suggested_quiz_links": [
+    "sample_quiz_001"
+  ]
+}
+
+

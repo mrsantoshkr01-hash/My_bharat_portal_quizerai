@@ -1,0 +1,10 @@
+This is a placeholder file representing a sample handwritten image for QuizerAI.
+
+Use this file to:
+- Test OCR robustness on messy or handwritten notes.
+- Demonstrate limitations and fallbacks of OCR in your demos.
+
+In a real setup, replace this with an actual scanned or photographed
+handwritten page (e.g., class notes) where you have the rights to the content.
+
+

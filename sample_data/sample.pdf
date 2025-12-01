@@ -1,0 +1,10 @@
+This is a placeholder file representing a sample PDF document for QuizerAI.
+
+Use this file to:
+- Test the OCR extraction endpoint.
+- Demonstrate quiz generation from documents during demos/hackathons.
+
+In a real environment, replace this with an actual PDF (textbook chapter,
+lecture slides exported to PDF, etc.) that complies with your content licenses.
+
+
