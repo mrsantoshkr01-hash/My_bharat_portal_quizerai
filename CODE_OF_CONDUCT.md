@@ -54,7 +54,7 @@ Instances of abusive, harassing, or otherwise unacceptable behavior may be repor
 
 You can contact the maintainers via:
 
-- Email: [your-email@example.com]
+- Email: quizerai2707@gmail.com
 
 All complaints will be reviewed and investigated promptly and fairly.
 
