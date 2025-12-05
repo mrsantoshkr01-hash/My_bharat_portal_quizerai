@@ -11,7 +11,7 @@ Please take a moment to read this document before contributing.
 - **1. Fork the Repository**
   - Click “Fork” on GitHub and clone your fork locally:
     ```bash
-    git clone https://github.com/<your-username>/QuizerAI.git
+    git clone https://github.com/mrsantoshkr01-hash/My_bharat_portal_quizerai.git
     cd QuizerAI
     ```
 
