@@ -10,7 +10,7 @@ If you discover a security vulnerability in QuizerAI:
 
 - **Do not** create a public GitHub issue with sensitive details.
 - Instead, please contact the maintainers directly:
-  - Email: [your-email@example.com]
+  - Email: quizerai2707@gmail.com
 
 When reporting, please include:
 
