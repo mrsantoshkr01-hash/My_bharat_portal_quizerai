@@ -491,8 +491,8 @@ This project is licensed under the **MIT License** – see `LICENSE` for details
 For questions, support, or collaboration:
 
 - **Project**: QuizerAI
-- **Maintainer**: [Your Name or Organization]
-- **Email**: [your-email@example.com]
+- **Maintainer**: Quizerai
+- **Email**: quizerai2707@gmail.com
 - **Issues & Feature Requests**: Use the GitHub Issues tab.
 
 If you are reporting a security vulnerability, please refer to `SECURITY.md` for responsible disclosure guidelines.
