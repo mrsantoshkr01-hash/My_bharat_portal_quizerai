@@ -50,7 +50,7 @@ QuizerAI is designed to be **hackathon-ready**, **cloud-native**, and **extensib
 - **Backend**
   - Python 3.x
   - FastAPI
-  - SQLAlchemy / async DB client (e.g., PostgreSQL)
+  - SQLAlchemy / async DB client (e.g., MySQL)
   - Redis (optional) for caching and rate limiting
 
 - **AI & OCR**
@@ -60,7 +60,7 @@ QuizerAI is designed to be **hackathon-ready**, **cloud-native**, and **extensib
 - **Infrastructure (suggested)**
   - AWS Lambda / ECS / EKS for backend
   - API Gateway / ALB
-  - RDS / Aurora (PostgreSQL)
+  - RDS / Aurora (MYSQL)
   - S3 for file storage
   - CloudFront for CDN
 
